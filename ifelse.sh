@@ -9,7 +9,7 @@ else
    echo "You are running with the root access"
 fi
 dnf list installed mysql
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
    echo "MySQL is not installed... going to install it"
    dnf install mysql -y
