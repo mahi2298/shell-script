@@ -21,6 +21,7 @@ then
    exit 1
 else 
    echo "You are running the script with root access" | tee -a $LOG_FILE
+fi
 
 VALIDATE () {
     if [ $1 -eq 0 ]
