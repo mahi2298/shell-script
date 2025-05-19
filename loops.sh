@@ -37,8 +37,8 @@ do
     if [ $? -ne 0 ]
     then
        echo "$package is not Installed already ... going to install it "
-    dnf install $packagel -y &>>$LOG_FILE
-    VALIDATE $? "MYSQL"
+       dnf install $package -y &>>$LOG_FILE
+       VALIDATE $? "$package"
     else
        echo -e "Nothing to do .... $Y $package is already Installed $N" | tee -a $LOG_FILE
     fi
