@@ -39,7 +39,7 @@ do
        echo "$package is not Installed already ... going to install it "
     dnf install $packagel -y &>>$LOG_FILE
     VALIDATE $? "MYSQL"
-else
-    echo -e "Nothing to do .... $Y $package is already Installed $N" | tee -a $LOG_FILE
-fi
+    else
+       echo -e "Nothing to do .... $Y $package is already Installed $N" | tee -a $LOG_FILE
+    fi
 done
