@@ -20,11 +20,11 @@ else
    echo "You are running the script with root access" | tee -a $LOG_FILE
 
 VALIDATE () {
-    if [ $? -eq 0 ]
+    if [ $1 -eq 0 ]
    then 
-      echo -e "Installing MYSQL is $G SUCCESS ... $N " | tee -a $LOG_FILE
+      echo -e "Installing $2 is $G SUCCESS ... $N " | tee -a $LOG_FILE
    else
-      echo -e "Installing MYSQL is $R FAILURE ... $N " | tee -a $LOG_FILE
+      echo -e "Installing $2 is $R FAILURE ... $N " | tee -a $LOG_FILE
 }
 
 for package in ${PACKAGES[@]}
